@@ -40,8 +40,10 @@ function handleYes() {
     // 2. Change Text
     headerText.innerHTML = "Yay! Srish is my Valentine! 💖";
 
-    // 3. Change Image to Hugging Bears
-    mainGif.src = "https://media.tenor.com/5mY0_OOHGJUAAAAi/bubu-dudu-hug.gif"; // Hugging bears
+    // 3. Change Image (if exists)
+    if (mainGif) {
+        mainGif.src = "https://media.tenor.com/5mY0_OOHGJUAAAAi/bubu-dudu-hug.gif";
+    }
 
     // 4. Hide Buttons (clean view)
     document.querySelector('.buttons').style.display = 'none';
