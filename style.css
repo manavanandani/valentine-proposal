@@ -36,19 +36,27 @@ body {
     /* Pink glow shadow */
     border: 1px solid rgba(255, 255, 255, 0.8);
     max-width: 90vw;
+    width: 90%;
+    /* Ensure it doesn't overflow horizontally */
 }
 
 .header-text {
     font-family: 'Fredoka One', cursive;
     /* Fun, bubbly font */
-    font-size: 3rem;
+    font-size: 2.5rem;
+    /* Slightly smaller default */
     color: var(--text-color);
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 0px #fff;
+    line-height: 1.2;
+    /* Prevent clipping */
 }
 
 .gif-container img {
-    width: 250px;
+    width: 100%;
+    /* Responsive width */
+    max-width: 250px;
+    /* Cap max size */
     height: auto;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -59,6 +67,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    /* Allow wrapping on very small screens */
 }
 
 .btn {
