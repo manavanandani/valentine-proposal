@@ -26,7 +26,10 @@ body {
     text-align: center;
     position: relative;
     padding: 1rem;
-    /* Removed box styling */
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
     width: 100%;
     max-width: 100%;
 }
