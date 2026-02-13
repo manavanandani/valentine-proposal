@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #fce4ec; /* Light Pink */
+    --text-color: #d81b60; /* Dark Pink/Red */
+    --btn-color: #ff4081; /* Pink Button */
+    --btn-hover: #f50057; /* Darker Pink */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden; /* Prevent scrollbars when button moves */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+}
+
+.header-text {
+    font-family: 'Fredoka One', cursive; /* Fun, bubbly font */
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+.gif-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    font-family: 'Nunito', sans-serif;
+}
+
+.yes-btn {
+    background-color: #4CAF50; /* Green for Yes */
+    color: white;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.yes-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.no-btn {
+    background-color: #ff5252; /* Red for No */
+    color: white;
+    position: relative; /* Allows absolute positioning later */
+    box-shadow: 0 4px 10px rgba(255, 82, 82, 0.3);
+}
+
+/* Tooltip style from the screenshot */
+.tooltip {
+    position: absolute;
+    top: -60px; /* Above the container initially */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #333;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.3s;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.tooltip.visible {
+    opacity: 1;
+    top: -80px; /* Pop up slightly */
+}
+
+/* Arrow for tooltip */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
