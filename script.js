@@ -38,7 +38,7 @@ function handleYes() {
     });
 
     // 2. Change Text
-    headerText.innerHTML = "Yay! Best Valentine Ever! 🥰";
+    headerText.innerHTML = "Yay! Srish is my Valentine! 🥰💖";
 
     // 3. Change Image to Hugging Bears
     mainGif.src = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"; // Keep loop or change to hug

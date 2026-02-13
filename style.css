@@ -1,8 +1,12 @@
 :root {
-    --bg-color: #fce4ec; /* Light Pink */
-    --text-color: #d81b60; /* Dark Pink/Red */
-    --btn-color: #ff4081; /* Pink Button */
-    --btn-hover: #f50057; /* Darker Pink */
+    --bg-color: #fce4ec;
+    /* Light Pink */
+    --text-color: #d81b60;
+    /* Dark Pink/Red */
+    --btn-color: #ff4081;
+    /* Pink Button */
+    --btn-hover: #f50057;
+    /* Darker Pink */
 }
 
 body {
@@ -14,21 +18,29 @@ body {
     align-items: center;
     background-color: var(--bg-color);
     font-family: 'Nunito', sans-serif;
-    overflow: hidden; /* Prevent scrollbars when button moves */
+    overflow: hidden;
+    /* Prevent scrollbars when button moves */
 }
 
 .container {
     text-align: center;
     position: relative;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    /* More opaque */
+    border-radius: 30px;
+    /* Softer corners */
+    backdrop-filter: blur(10px);
+    /* Stronger frosted glass */
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.4);
+    /* Pink glow shadow */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    max-width: 90vw;
 }
 
 .header-text {
-    font-family: 'Fredoka One', cursive; /* Fun, bubbly font */
+    font-family: 'Fredoka One', cursive;
+    /* Fun, bubbly font */
     font-size: 3rem;
     color: var(--text-color);
     margin-bottom: 1.5rem;
@@ -40,7 +52,7 @@ body {
     height: auto;
     border-radius: 15px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
@@ -61,7 +73,8 @@ body {
 }
 
 .yes-btn {
-    background-color: #4CAF50; /* Green for Yes */
+    background-color: #4CAF50;
+    /* Green for Yes */
     color: white;
     box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
 }
@@ -72,16 +85,19 @@ body {
 }
 
 .no-btn {
-    background-color: #ff5252; /* Red for No */
+    background-color: #ff5252;
+    /* Red for No */
     color: white;
-    position: relative; /* Allows absolute positioning later */
+    position: relative;
+    /* Allows absolute positioning later */
     box-shadow: 0 4px 10px rgba(255, 82, 82, 0.3);
 }
 
 /* Tooltip style from the screenshot */
 .tooltip {
     position: absolute;
-    top: -60px; /* Above the container initially */
+    top: -60px;
+    /* Above the container initially */
     left: 50%;
     transform: translateX(-50%);
     background: white;
@@ -99,7 +115,8 @@ body {
 
 .tooltip.visible {
     opacity: 1;
-    top: -80px; /* Pop up slightly */
+    top: -80px;
+    /* Pop up slightly */
 }
 
 /* Arrow for tooltip */
